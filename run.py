@@ -25,6 +25,8 @@ def draw_model(model, end_position = False):
     if end_position:
         plt.legend()
 
+    plt.show()
+
 
 def draw_trace(model, trace, columns):
     df = pd.DataFrame(trace)
@@ -37,6 +39,7 @@ def draw_trace(model, trace, columns):
         tr = pd.DataFrame(df[col].tolist(), columns=['x', 'y'])
         plt.scatter(tr.x, tr.y, color=colors[part_index])
 
+    plt.show()
 
 def plot_forces(trace, cols=None):
     tr = pd.DataFrame(trace)
